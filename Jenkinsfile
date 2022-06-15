@@ -5,7 +5,7 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
                 git url: 'https://github.com/michael-shl/simple-jenkins-pipeline.git', branch: 'master'
-                // Run shell script
+                // Check python3 version
                 sh "python3 --version"
             }
         }
