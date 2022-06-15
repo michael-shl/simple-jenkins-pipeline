@@ -1,10 +1,15 @@
 pipeline {
     agent any
     stages {
+        stage('Checkout scm') {
+            steps {
+                checkout(scm)
+            }
+        }
         stage('Build') {
             steps {
                 // Check python3 version
-                sh "python3 --version"
+                sh 'python3 --version'
             }
         }
         stage("HTML Report") {
